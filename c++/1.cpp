@@ -3,6 +3,7 @@
 #include <algorithm>
 
 using namespace std;
+int MOD = 1000000007;
 
 int getFibonacci(int n) {
     if (n <= 2) {
@@ -16,6 +17,7 @@ int getFibonacci(int n) {
 
     for (int i = 3; i <= n; i++) {
         current = firstPrev + secondPrev;
+        current %= MOD;
         firstPrev = secondPrev;
         secondPrev = current;
     }
