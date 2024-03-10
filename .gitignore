@@ -1,0 +1,17 @@
+# Ignore object files and executables
+*.o
+*.out
+*.exe
+
+# Ignore build and output directories
+
+# Ignore Visual Studio Code settings
+
+# Ignore compiled binaries
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore macOS system files
+.DS_Store
