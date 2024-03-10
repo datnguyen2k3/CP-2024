@@ -1,3 +1,11 @@
 {
-  "cSpell.words": ["subarray"]
+  "cSpell.words": ["subarray"],
+  "files.associations": {
+    "*.ejs": "html",
+    "vector": "cpp",
+    "iosfwd": "cpp"
+  },
+  "code-runner.executorMap": {
+    "cpp": "cd $dir && g++ -std=c++17 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  }
 }
