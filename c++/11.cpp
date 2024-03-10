@@ -39,5 +39,4 @@ int main() {
     int target = 7;
 
     cout << getRollingWays(dices, faces, target) << endl; // 6
-    return 0;
 }
