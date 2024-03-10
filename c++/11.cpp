@@ -5,6 +5,13 @@
 using namespace std;
 int MOD = 1000000007;
 
+int getSubarraySum(vector<int> &prefixSums, int left, int right) {
+    if (left == 0) {
+        return prefixSums[right];
+    }
+    return (prefixSums[right] - prefixSums[left - 1] + MOD) % MOD;
+}
+
 int getRollingWays(int dices, int faces, int target) {
     vector<vector<int>> ways(dices + 1, vector<int>(target + 1, 0));
     vector<vector<int>> prefixWays(dices + 1, vector<int>(target + 1, 0));
@@ -17,12 +24,7 @@ int getRollingWays(int dices, int faces, int target) {
             int minPrevSum = max(0, sum - faces);
             int maxPrevSum = sum - 1;
 
-            if (minPrevSum > 0) {
-                ways[dicesNumber][sum] = (prefixWays[dicesNumber - 1][maxPrevSum] - prefixWays[dicesNumber - 1][minPrevSum - 1] + MOD) % MOD;
-            } else {
-                ways[dicesNumber][sum] = prefixWays[dicesNumber - 1][maxPrevSum];
-            }
-
+            ways[dicesNumber][sum] = getSubarraySum(prefixWays[dicesNumber - 1], minPrevSum, maxPrevSum);
             prefixWays[dicesNumber][sum] = (prefixWays[dicesNumber][sum - 1] + ways[dicesNumber][sum]) % MOD;
         }
     }
