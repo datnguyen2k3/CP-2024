@@ -53,7 +53,8 @@ int getMinRightCharsToMakePalindrome(string str) {
 
 int main() {
 
-    string str = "aacec";
+    string str;
+    cin >> str;
 
     cout << getMinRightCharsToMakePalindrome(str) << endl; // 2
     return 0;

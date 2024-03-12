@@ -21,7 +21,14 @@ int getMaxSubarray(vector<int>& nums) {
 
 int main() {
 
-    vector<int> nums = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
-    cout << getMaxSubarray(nums) << endl; // 6
+    int n;
+    cin >> n;
+
+    vector<int> nums(n, 0);
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
+
+    cout << getMaxSubarray(nums) << endl;
     return 0;
 }

@@ -29,8 +29,21 @@ int getMaxBridges(vector<int>& north, vector<int>& south) {
 }
 
 int main() {
-    vector<int> north = {1, 4, 2, 5, 3};
-    vector<int> south = {3, 2, 4, 1, 5};
+
+    int n;
+    cin >> n;
+
+    vector<int> north(n, 0);
+    vector<int> south(n, 0);
+
+    for (int i = 0; i < n; i++) {
+        cin >> north[i];
+    }
+
+    for (int i = 0; i < n; i++) {
+        cin >> south[i];
+    }
+
     cout << getMaxBridges(north, south) << endl; // 2
     return 0;
 }

@@ -27,6 +27,9 @@ int getFibonacci(int n) {
 }
 
 int main() {
-    cout << getFibonacci(10) << endl;
+
+    int n;
+    cin >> n;
+    cout << getFibonacci(n) << endl;
     return 0;
 }

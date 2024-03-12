@@ -34,9 +34,8 @@ int getRollingWays(int dices, int faces, int target) {
 
 int main() {
 
-    int dices = 2;
-    int faces = 6;
-    int target = 7;
+    int dices, faces, target;
+    cin >> dices >> faces >> target;
 
     cout << getRollingWays(dices, faces, target) << endl; // 6
 }

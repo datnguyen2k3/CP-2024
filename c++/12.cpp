@@ -20,10 +20,14 @@ int getMoneyExchangeWays(int amount, vector<int> &coins) {
 
 int main() {
 
-    int amount = 5;
-    vector<int> coins = {1, 2, 5};
+    int amount, coinNumber;
+    cin >> amount >> coinNumber;
 
-    cout << getMoneyExchangeWays(amount, coins) << endl; // 4
+    vector<int> coins(coinNumber, 0);
+    for (int i = 0; i < coinNumber; i++) {
+        cin >> coins[i];
+    }
 
+    cout << getMoneyExchangeWays(amount, coins) << endl;
     return 0;
 }

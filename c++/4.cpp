@@ -32,7 +32,14 @@ int getMinJumps(vector<int>& jumps) {
 
 int main() {
     
-    vector<int> jumps = {2, 3, 1, 1, 2, 4, 2, 0, 1, 1};
+    int n;
+    cin >> n;
+
+    vector<int> jumps(n, 0);
+    for (int i = 0; i < n; i++) {
+        cin >> jumps[i];
+    }
+
     cout << getMinJumps(jumps) << endl; // 4
     return 0;
 }

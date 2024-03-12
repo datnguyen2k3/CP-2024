@@ -27,10 +27,20 @@ int getMaxValue(vector<int> weights, vector<int> values, int maxCapacity) {
 }
 
 int main() {
+    int n, capacity;
+    cin >> n >> capacity;
 
-    vector<int> weights = {1, 2, 3};
-    vector<int> values = {20, 10, 12};
+    vector<int> weights(n, 0);
+    vector<int> values(n, 0);
 
-    cout << getMaxValue(weights, values, 5) << endl; // 32
+    for (int i = 0; i < n; i++) {
+        cin >> weights[i];
+    }
+
+    for (int i = 0; i < n; i++) {
+        cin >> values[i];
+    }
+
+    cout << getMaxValue(weights, values, capacity) << endl;
     return 0;
 }

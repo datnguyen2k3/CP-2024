@@ -25,7 +25,13 @@ int getLongestIncreasingSubsequence(vector<int> arr) {
 
 int main() {
 
-    vector<int> arr = {10, 22, 9, 33, 21, 50, 41, 60, 80};
+    int n;
+    cin >> n;
+
+    vector<int> arr(n, 0);
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
 
     cout << getLongestIncreasingSubsequence(arr) << endl; // 6
     return 0;

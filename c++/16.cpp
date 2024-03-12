@@ -41,9 +41,10 @@ string getLongestCommonSubstring(string str1, string str2) {
 
 int main() {
 
-    string str1 = "abcdxyz";
-    string str2 = "xyzabcd";
+    string str1, str2;
+    getline(cin, str1);
+    getline(cin, str2);
 
-    cout << getLongestCommonSubstring(str1, str2) << endl; // abcd
+    cout << getLongestCommonSubstring(str1, str2) << endl;
     return 0;
 }

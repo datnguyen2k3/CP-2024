@@ -20,8 +20,11 @@ int getCatalan(int n) {
     return catalan[n];
 }
 
-int main() {
+int main() {    
 
-    cout << getCatalan(3) << endl; // 5
+    int n;
+    cin >> n;
+
+    cout << getCatalan(n) << endl; // 5
     return 0;
 }

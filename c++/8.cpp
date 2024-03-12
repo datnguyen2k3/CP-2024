@@ -25,6 +25,9 @@ int getJumpStairWays(int n) {
 
 int main() {
 
-    cout << getJumpStairWays(4) << endl; // 5
+    int n;
+    cin >> n;
+
+    cout << getJumpStairWays(n) << endl; // 5
     return 0;
 }

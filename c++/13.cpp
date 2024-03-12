@@ -33,7 +33,8 @@ int getLongestPalindromeString(string str) {
 
 int main() {
 
-    string str = "babad";
+    string str;
+    cin >> str;
 
     cout << getLongestPalindromeString(str) << endl; // 3
     return 0;

@@ -34,7 +34,24 @@ bool canSeparateIntoTwoEqualSumSubsets(vector<int> &nums) {
 
 int main() {
 
-    vector<int> nums = {1, 5, 11, 5};
-    cout << canSeparateIntoTwoEqualSumSubsets(nums) << endl; // true
+    int testCases;
+    cin >> testCases;
+
+    for (int testCase = 0; testCase < testCases; testCase++) {
+        int n;
+        cin >> n;
+
+        vector<int> nums(n, 0);
+        for (int i = 0; i < n; i++) {
+            cin >> nums[i];
+        }
+
+        if (canSeparateIntoTwoEqualSumSubsets(nums)) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    }
+
     return 0;
 }

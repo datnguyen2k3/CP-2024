@@ -54,8 +54,9 @@ int getEditDistance(string str1, string str2) {
 
 int main() {
 
-    string str1 = "sunday";
-    string str2 = "saturday";
+    string str1, str2;
+    getline(cin, str1);
+    getline(cin, str2);
 
     cout << getEditDistance(str1, str2) << endl; // 3
     return 0;
