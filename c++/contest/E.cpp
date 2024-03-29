@@ -7,7 +7,8 @@ using namespace std;
 int MOD = 1000000007;
 
 long long get_isosceles_triangles(vector<int> edges) {
-    unordered_map<int, int> edge_count;
+    sort(edges.begin(), edges.end());
+    unordered_map<int, long long> edge_count;
     for (int edge : edges) {
         edge_count[edge]++;
     }
@@ -18,8 +19,10 @@ long long get_isosceles_triangles(vector<int> edges) {
             continue;
         }
 
-        res += (long long) count * (count - 1) / 2 * (edges.size() - count);
-        res += (long long) count * (count - 1) * (count - 2) / 6;
+        res += (count * (count - 1) * (count - 2)) / 6;
+
+        int lefts = lower_bound(edges.begin(), edges.end(), edge * 2) - edges.begin() - count;
+        res += ((count * (count - 1)) / 2) * lefts;
     }
 
     return res;

@@ -47,24 +47,10 @@ long long get_max_triangle(vector<pair<int, int>> &points) {
     }
 
     long long max_area = 0;
-    for (auto y : ys) {
-        int curr_x_max = x_max_by_y[y];
-        int curr_x_min = x_min_by_y[y];
-        if (curr_x_max == curr_x_min || y_max == y_min) {
-            continue;
-        }
-
-        max_area = max(max_area, (long long) (curr_x_max - curr_x_min) * max((y_max - y), (y - y_min)));
-    }
-
-    for (auto x : xs) {
-        int curr_y_max = y_max_by_x[x];
-        int curr_y_min = y_min_by_x[x];
-        if (curr_y_max == curr_y_min || x_max == x_min) {
-            continue;
-        }
-
-        max_area = max(max_area, (long long) (curr_y_max - curr_y_min) * max((x_max - x), (x - x_min)));
+    for (auto& [x, y] : points) {
+        int width_length = max(x - x_min_by_y[y], x_max_by_y[y] - x);
+        int height_length = max(y - y_min_by_x[x], y_max_by_x[x] - y);
+        max_area = max(max_area, (long long) width_length * height_length);
     }
 
     return max_area;
