@@ -3,7 +3,10 @@
   "files.associations": {
     "*.ejs": "html",
     "vector": "cpp",
-    "iosfwd": "cpp"
+    "iosfwd": "cpp",
+    "unordered_map": "cpp",
+    "__hash_table": "cpp",
+    "iostream": "cpp"
   },
   "code-runner.executorMap": {
     "cpp": "cd $dir && g++ -std=c++17 $fileName -o build/$fileNameWithoutExt && ./build/$fileNameWithoutExt"
